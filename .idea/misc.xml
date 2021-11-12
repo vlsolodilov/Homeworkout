@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidStudioProjects/Homeworkout/app/src/main/res/drawable/circle_progress_bar.xml" value="0.21302083333333333" />
+        <entry key="..\:/AndroidStudioProjects/Homeworkout/app/src/main/res/drawable/circle_shape.xml" value="0.21302083333333333" />
+        <entry key="..\:/AndroidStudioProjects/Homeworkout/app/src/main/res/layout/activity_main.xml" value="0.36102564102564105" />
+        <entry key="..\:/AndroidStudioProjects/Homeworkout/app/src/main/res/layout/activity_pullup.xml" value="0.36102564102564105" />
+        <entry key="..\:/AndroidStudioProjects/Homeworkout/app/src/main/res/layout/activity_reps.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/Homeworkout/app/src/main/res/layout/item_list_exercise.xml" value="0.36102564102564105" />
+        <entry key="..\:/AndroidStudioProjects/Homeworkout/app/src/main/res/layout/item_list_exercise_layout.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/Homeworkout/app/src/main/res/layout/item_list_pullup_layout.xml" value="0.36102564102564105" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

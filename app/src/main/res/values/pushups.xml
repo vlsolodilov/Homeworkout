@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="pushups_level_1">
+        <item>10</item>
+        <item>10</item>
+        <item>10</item>
+    </integer-array>
+    <integer-array name="pushups_level_2">
+        <item>10</item>
+        <item>10</item>
+        <item>10</item>
+        <item>10</item>
+        <item>10</item>
+    </integer-array>
+    <integer-array name="pushups_level_3">
+        <item>12</item>
+        <item>10</item>
+        <item>10</item>
+        <item>10</item>
+        <item>10</item>
+    </integer-array>
+    <integer-array name="pushups_level_4">
+        <item>12</item>
+        <item>12</item>
+        <item>10</item>
+        <item>10</item>
+        <item>10</item>
+    </integer-array>
+    <integer-array name="pushups_level_5">
+        <item>13</item>
+        <item>12</item>
+        <item>12</item>
+        <item>10</item>
+        <item>10</item>
+    </integer-array>
+    <integer-array name="pushups_level_6">
+        <item>13</item>
+        <item>13</item>
+        <item>12</item>
+        <item>12</item>
+        <item>10</item>
+    </integer-array>
+    <integer-array name="pushups_level_7">
+        <item>14</item>
+        <item>13</item>
+        <item>12</item>
+        <item>12</item>
+        <item>12</item>
+    </integer-array>
+
+</resources>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Home workout</string>
+    <string name="level">ур</string>
+    <string name="lastActivity">Последняя активность: </string>
+    <string name="pullups">Подтягивания</string>
+    <string name="pushups">Отжимания</string>
+    <string name="squats">Приседания</string>
+    <string name="workout">Тренировки</string>
+    <string name="total_reps">Всего повторений:</string>
+    <string-array name="workout">
+        <item>Подтягивания</item>
+        <item>Отжимания</item>
+        <item>Приседания</item>
+    </string-array>
+</resources>
