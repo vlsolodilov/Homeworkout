@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.homeworkout.Constants;
@@ -28,6 +29,7 @@ import java.util.List;
 public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.MyViewHolder> {
     private Context context;
     private List<Exercise> exerciseList;
+
 
 
     public WorkoutAdapter(Context context) {
@@ -54,16 +56,19 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.MyViewHo
     }
 
     static class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        private CardView cvExercise;
         private TextView tvExerciseName, tvDate, tvTotalReps;
         private Button bLevel;
         private LinearLayout lineWiteDate, lineWiteTotal;
         private Context context;
         private List<Exercise> exerciseList;
+        private final int[] CELL_COLOR = {R.color.blue_500, R.color.red, R.color.orange};
 
         public MyViewHolder(@NonNull View itemView, Context context, List<Exercise> exerciseList) {
             super(itemView);
             this.context = context;
             this.exerciseList = exerciseList;
+            cvExercise = itemView.findViewById(R.id.cvExercise);
             tvExerciseName = itemView.findViewById(R.id.tvExerciseName);
             tvDate = itemView.findViewById(R.id.tvDate);
             tvTotalReps = itemView.findViewById(R.id.tvTotalReps);
@@ -74,6 +79,8 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.MyViewHo
         }
 
         public void setData(String name, int level, long date, int total){
+
+            cvExercise.setCardBackgroundColor(context.getResources().getColor(CELL_COLOR[getAdapterPosition() % CELL_COLOR.length]));
             tvExerciseName.setText(name);
 
             if (level == 0) {

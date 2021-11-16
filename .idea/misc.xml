@@ -3,11 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/Homeworkout/app/src/main/res/drawable/button_background.xml" value="0.3828125" />
         <entry key="..\:/AndroidStudioProjects/Homeworkout/app/src/main/res/drawable/circle_progress_bar.xml" value="0.21302083333333333" />
         <entry key="..\:/AndroidStudioProjects/Homeworkout/app/src/main/res/drawable/circle_shape.xml" value="0.21302083333333333" />
         <entry key="..\:/AndroidStudioProjects/Homeworkout/app/src/main/res/layout/activity_main.xml" value="0.36102564102564105" />
         <entry key="..\:/AndroidStudioProjects/Homeworkout/app/src/main/res/layout/activity_pullup.xml" value="0.36102564102564105" />
-        <entry key="..\:/AndroidStudioProjects/Homeworkout/app/src/main/res/layout/activity_reps.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/Homeworkout/app/src/main/res/layout/activity_reps.xml" value="0.5" />
         <entry key="..\:/AndroidStudioProjects/Homeworkout/app/src/main/res/layout/item_list_exercise.xml" value="0.36102564102564105" />
         <entry key="..\:/AndroidStudioProjects/Homeworkout/app/src/main/res/layout/item_list_exercise_layout.xml" value="0.33" />
         <entry key="..\:/AndroidStudioProjects/Homeworkout/app/src/main/res/layout/item_list_pullup_layout.xml" value="0.36102564102564105" />

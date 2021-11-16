@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Home workout</string>
     <string name="level">ур</string>
-    <string name="lastActivity">Последняя активность: </string>
+    <string name="lastActivity">Последняя активность:</string>
     <string name="pullups">Подтягивания</string>
     <string name="pushups">Отжимания</string>
     <string name="squats">Приседания</string>

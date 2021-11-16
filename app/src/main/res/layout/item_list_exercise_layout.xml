@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvExercise"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="100dp"
     android:layout_marginStart="5dp"
     android:layout_marginTop="5dp"
     android:layout_marginEnd="5dp"
@@ -27,11 +28,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|left"
-                android:layout_marginRight="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/roboto"
                 android:text="Подтягивания"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:autoSizeMinTextSize="14sp" />
 
@@ -40,7 +42,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="2 ур" />
+                android:text="2 ур"
+                android:backgroundTint="@color/blue_700"/>
         </LinearLayout>
 
         <LinearLayout
@@ -55,6 +58,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
+                android:layout_marginEnd="5dp"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:text="@string/lastActivity" />
@@ -64,6 +68,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
+                android:layout_marginEnd="5dp"
                 android:fontFamily="@font/roboto"
                 android:text="2 дн. назад" />
         </LinearLayout>
@@ -81,6 +86,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
+                android:layout_marginEnd="5dp"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:text="@string/total_reps" />
@@ -90,6 +96,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
+                android:layout_marginEnd="5dp"
                 android:fontFamily="@font/roboto"
                 android:text="100000" />
         </LinearLayout>

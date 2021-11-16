@@ -7,10 +7,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Chronometer;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -25,7 +23,7 @@ public class RepsActivity extends AppCompatActivity {
     private FloatingActionButton fabDecreaseReps, fabIncreaseReps;
     private ExtendedFloatingActionButton fabDecreaseTime, fabIncreaseTime;
     private Button bDone, bStop;
-    private ProgressBar progressBar;
+    private ProgressBar pbTime, pbTotal;
 
     private ConstraintLayout clReps, clTimer;
 
@@ -52,6 +50,9 @@ public class RepsActivity extends AppCompatActivity {
         clReps = findViewById(R.id.clReps);
         clTimer = findViewById(R.id.clTimer);
 
+        pbTime = findViewById(R.id.pbTime);
+        pbTotal = findViewById(R.id.pbTotal);
+
         tvReps1 = findViewById(R.id.tvReps1);
         tvReps2 = findViewById(R.id.tvReps2);
         tvReps3 = findViewById(R.id.tvReps3);
@@ -67,8 +68,6 @@ public class RepsActivity extends AppCompatActivity {
         tvCurrentReps.setText(String.valueOf(reps[count]));
         changeTextColor(count);
         tvCurrentTime = findViewById(R.id.tvCurrentTime);
-
-        progressBar = findViewById(R.id.progressBar);
 
         fabDecreaseReps = findViewById(R.id.fabDecreaseReps);
         fabIncreaseReps = findViewById(R.id.fabIncreaseReps);
@@ -107,15 +106,17 @@ public class RepsActivity extends AppCompatActivity {
                     Intent i = new Intent(RepsActivity.this, MainActivity.class);
                     DataStorage dataStorage = new DataStorage(getSharedPreferences(Constants.APP_PREFERENCES, Context.MODE_PRIVATE));
                     dataStorage.saveTotal(name, summReps);
+                    dataStorage.saveDate(name);
                     startActivity(i);
                 } else {
                     tvCurrentReps.setText(String.valueOf(reps[count]));
                     tvSummReps.setText(String.valueOf(summReps));
+                    pbTotal.setProgress(summReps);
                     resetTextColor();
                     changeTextColor(count);
                     clTimer.setVisibility(View.VISIBLE);
                     clReps.setVisibility(View.GONE);
-                    createNewTimer(90000);
+                    createNewTimer(120000);
                 }
             }
         });
@@ -168,10 +169,11 @@ public class RepsActivity extends AppCompatActivity {
         tvReps4.setText(reps[3] == 0 ? "" : String.valueOf(reps[3]));
         tvReps5.setText(reps[4] == 0 ? "" : String.valueOf(reps[4]));
         tvTotal.setText(String.valueOf(total));
+        pbTotal.setMax(total);
     }
 
     private void changeTextColor(int count) {
-        int color = getResources().getColor(R.color.purple_500);
+        int color = getResources().getColor(R.color.blue_500);
         switch (count) {
             case 0:
                 tvReps1.setTextColor(color);
@@ -227,6 +229,7 @@ public class RepsActivity extends AppCompatActivity {
     private void changeTotal(int delta) {
         int total = Integer.parseInt(tvTotal.getText().toString());
         tvTotal.setText(String.valueOf(total + delta));
+        pbTotal.setMax(total + delta);
         deltaReps = 0;
     }
 
@@ -253,8 +256,8 @@ public class RepsActivity extends AppCompatActivity {
                 int m = (int) ((millisUntilFinished / 1000) / 60);
                 int s = (int) ((millisUntilFinished / 1000) % 60);
                 tvCurrentTime.setText(String.format("%02d:%02d", m, s));
-                progressBar.setMax(90000);
-                progressBar.setProgress((int) millisUntilFinished);
+                pbTime.setMax(120000);
+                pbTime.setProgress((int) millisUntilFinished);
             }
 
             @Override

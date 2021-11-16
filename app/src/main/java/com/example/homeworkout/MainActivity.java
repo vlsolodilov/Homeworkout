@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
 
         if (back_pressed + 1000 > System.currentTimeMillis()) {
-            super.onBackPressed();
+            finishAffinity();
         } else {
             Toast.makeText(getBaseContext(), "Нажмите еще раз для выхода", Toast.LENGTH_SHORT).show();
         }

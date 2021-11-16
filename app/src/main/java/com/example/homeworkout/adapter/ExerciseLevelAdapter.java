@@ -81,7 +81,7 @@ public class ExerciseLevelAdapter extends RecyclerView.Adapter<ExerciseLevelAdap
             i.putExtra(Constants.LEVEL, level);
             DataStorage dataStorage = new DataStorage(context.getSharedPreferences(Constants.APP_PREFERENCES, Context.MODE_PRIVATE));
             dataStorage.saveLevel(name, level);
-            dataStorage.saveDate(name, new Date().getTime());
+            dataStorage.saveDate(name);
             context.startActivity(i);
         }
     }

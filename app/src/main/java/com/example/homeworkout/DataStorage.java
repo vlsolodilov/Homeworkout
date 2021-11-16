@@ -3,6 +3,8 @@ package com.example.homeworkout;
 
 import android.content.SharedPreferences;
 
+import java.util.Date;
+
 public class DataStorage {
     private SharedPreferences preferences;
 
@@ -31,7 +33,7 @@ public class DataStorage {
         ed.apply();
     }
 
-    public void saveDate(Name name, long date) {
+    public void saveDate(Name name) {
         SharedPreferences.Editor ed = preferences.edit();
         String key;
         switch (name) {
@@ -47,7 +49,7 @@ public class DataStorage {
             default:
                 throw new IllegalStateException("Unexpected value: " + name);
         }
-        ed.putLong(key, date);
+        ed.putLong(key, new Date().getTime());
         ed.apply();
     }
 
